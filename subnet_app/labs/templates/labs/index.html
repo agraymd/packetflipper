@@ -1,0 +1,149 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!--GA TAG -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XZ8QLWW14V"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XZ8QLWW14V');
+    </script>
+    <!--END GA TAG-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="{% static '/labs/style.css' %}">
+    <title></title>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <!-- Custom styles for this template -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5641103059432927"
+       crossorigin="anonymous"></script><!--- GOOGLE ADS -->
+  </head>
+
+  <body >
+
+    <main role="main" class="container text-center">
+
+      <div class="row"> <!-- START ROW 1 --> 
+
+        <div class="col-12 text-center"> <!-- START COL 1 --> 
+          
+          <div id="question_container"> <!-- START QUESTION CONTAIN --> 
+            
+            <ul class="nav nav-tabs" id="questions" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="useable-hosts" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">What is the Subnet?</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">How Many Hosts & Networks?</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">What's the mask?</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab"><!-- START What is the SUBNET TAB -->
+
+                <h1>What is the network address of {{ guess_ip_string }}?</h1>
+                <p class="hidden">It is in <span  id="correct">{{ check_against }}</span></p>
+                <!-- CREATE DIV TO INSERT TEXT WITH CORRECT ANSWER -->
+                <div id="correct_answer_textarea" class='hidden'>
+                  <p>Yay! You were right! The {{ guess_ip_string }} is in network {{ check_against }}</p>
+
+                </div>
+                <input id="user_input" type="text" placeholder="Answer Format: 1.1.1.0/30" pattern="[0-255].">
+                <p class="lead text-center">Enter the answer in this format: X.X.X.X/XX</p>
+                <div id="ads_div" class="">
+                  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5641103059432927"
+                       crossorigin="anonymous"></script>
+                  <!-- TEST-ADS2 -->
+                  <ins class="adsbygoogle"
+                       style="display:block"
+                       data-ad-client="ca-pub-5641103059432927"
+                       data-ad-slot="4598291497"
+                       data-ad-format="auto"
+                       data-full-width-responsive="true"></ins>
+                  <script>
+                       (adsbygoogle = window.adsbygoogle || []).push({});
+                  </script>
+                </div>
+
+                <button class="btn btn-success" value="Go!" id="go_button">GO!</button><br>
+
+                <a href="/labs"><button type="button" class="btn btn-primary margin-top-5px">NEW QUESTION</button></a>
+
+                <!-- EMAIL SIGNUP --> 
+                <div class="margin-top-5px text-center">
+                  <!-- Begin Mailchimp Signup Form -->
+                  <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+                  <style type="text/css">
+                    #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+                    /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                       We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                  </style>
+                  <div id="mc_embed_signup">
+                  <form action="https://tech.us19.list-manage.com/subscribe/post?u=77bf85a7862c2c6f59d74eeb1&amp;id=fec47aab61" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                      <div id="mc_embed_signup_scroll">
+                    <label for="mce-EMAIL">Tell me whe the App is complete!</label>
+                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_77bf85a7862c2c6f59d74eeb1_fec47aab61" tabindex="-1" value=""></div>
+                      <div class="clear"><input type="submit" value="Notify Me!" name="subscribe" id="mc-embedded-subscribe" class="margin-top-5px button btn btn-success"></div>
+                      </div>
+                  </form>
+                  </div>
+                </div>
+                <!--End mc_embed_signup-->
+
+              </div> <!-- END What is the SUBNET TAB -->
+
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><!-- START HOSTS AND NETWORKS TAB -->
+
+                <h1>Coming Soon!</h1>
+
+              </div> <!-- END HOSTS AND NETWORKS TAB -->
+
+
+
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><!-- START WHATS THE MASKER TAB --> 
+                <h1>Coming Soon!</h1>
+              </div> <!-- END WHATS THE MASKER TAB -->
+
+
+            </div>
+
+
+          </div> <!-- END QUESTION CONTAIN --> 
+
+        </div> <!-- END COL 1 --> 
+
+
+      </div> <!-- END ROW 1 -->
+
+    </main><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js">
+    </script>
+
+    <script src="{% static '/labs/compare_text.js' %}" crossorigin="anonymous"></script>
+  </body>
+</html>

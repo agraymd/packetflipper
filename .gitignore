@@ -1,0 +1,3 @@
+packetflipper_env/*
+.idea/*
+subnet_app/subnet_app/.env

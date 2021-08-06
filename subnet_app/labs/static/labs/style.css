@@ -1,0 +1,50 @@
+.hidden{
+    display: none;
+}
+
+#ads_div{
+
+}
+
+
+/* ADD SPACING BETWEEN EMAIL SIGNUP DIV AND ANSWER BUTTONS */
+
+.margin-top-5px{
+	margin-top: 10px;
+}
+
+
+/* ERROR SHAKE ANIMATION FOR WRONG ANSWER INPUT AND CORRECT */
+
+.error {
+    position: relative;
+    animation: shake .1s linear;
+    animation-iteration-count: 3;
+    box-shadow: 1px 1px 14px red;
+    margin: 4px;
+
+}
+
+.correct {
+    position: relative;
+    animation: shake2 1s linear;
+    animation-iteration-count: 1;
+    box-shadow: 1px 1px 14px green;
+    margin: 4px;
+
+}
+
+@keyframes shake{
+    0%{ left: -5px; }
+    100%{ right: -5px; }
+}
+
+@-moz-keyframes shake2 { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes shake2 { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes shake2 { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+/* SET .btn WIDTH SO ALL BUTTONS SAME WIDTH */
+
+.btn{
+	width: 270px;
+}
