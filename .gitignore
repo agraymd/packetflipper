@@ -1,4 +1,4 @@
 packetflipper_env/*
 .idea/*
 subnet_app/subnet_app/.env
-./subnet_app/collect_restart.sh
+subnet_app/collect_restart.sh
