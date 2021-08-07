@@ -48,3 +48,8 @@
 .btn{
 	width: 270px;
 }
+
+.center-amzn-div{
+    margin: 0 auto;
+    width: 80%;
+}
