@@ -44,13 +44,13 @@
             
             <ul class="nav nav-tabs nav-justified" id="questions" role="tablist">
               <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="useable-hosts" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">What is the Subnet?</button>
+                <button class="nav-link active" id="useable-hosts" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">What's the Subnet?</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">How Many Hosts & Networks?</button>
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">What's the mask?</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">What's the mask?</button>
+                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Hosts and Networks?</button>
               </li>
               <li class="nav-item" role="presentation">
                 <button class="nav-link" id="about-site-tab" data-bs-toggle="tab" data-bs-target="#about-site" type="button" role="tab" aria-controls="about-site" aria-selected="false">About This Site</button>
@@ -66,7 +66,7 @@
                   <p>Yay! You were right! The {{ guess_ip_string }} is in network {{ check_against }}</p>
 
                 </div>
-                <input id="user_input" type="text" placeholder="Answer Format: 1.1.1.0/30" pattern="[0-255].">
+                <input id="user_input" type="text" placeholder="Answer Format: 1.1.1.0/30">
                 <p class="lead text-center" id="input_instructions">Enter the answer in this format: X.X.X.X/XX</p>
                 <!--AMZN -->
                 <div class="center-amzn-div">
@@ -116,17 +116,53 @@
 
               </div> <!-- END What is the SUBNET TAB -->
 
-              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><!-- START HOSTS AND NETWORKS TAB -->
+              <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab"><!-- START HWHATS THE MASK TAB -->
 
-                <h1>Coming Soon!</h1>
+                <h1>What is the longest possible mask to accomodate {{ hosts_required }} hosts in network {{ classful_network_classful }}?</h1>
 
-              </div> <!-- END HOSTS AND NETWORKS TAB -->
+                <!-- hidden area to display with JS when answer is correct -->
+                <div id="howmanybits_correct_answer_area" class="hidden">
+                  <p>Yay! You are correct!</p>
+                  <!-- DEBUGGING / TEST ANSWER -->
+                  <p>The answer is <span id="correct_howmanybits">{{ correct_answer }}</span></p>
+
+                </div>
+
+                <p class="lead text-center" id="input_instructions">Type your answer in CIDR format.</p>
+                <input id="user_input_howmanybits" type="text" placeholder="Example: /23"><br>
+
+                <button class="btn btn-success margin-top-5px" value="Go!" id="go_button_howmanybits">GO!</button><br>
+                <a href="/labs"><button type="button" class="btn btn-primary margin-top-5px">NEW QUESTION</button></a>
 
 
 
-              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><!-- START WHATS THE MASKER TAB --> 
-                <h1>Coming Soon!</h1>
-              </div> <!-- END WHATS THE MASKER TAB -->
+
+              </div> <!-- END WHATS THE MASK TAB -->
+
+
+
+              <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab"><!-- HOW MANY HOSTS AND NETWORKS TAB START-->
+                <h1>How many useable hosts and how many subnets are available in {{ how_many_ip_string }}?</h1>
+
+                <!-- hidden area to display with JS when answer is correct -->
+                <div id="howmany_correct_answer_area" class="hidden">
+                  <p>Yay! You are correct!</p>
+                  <!-- DEBUGGING / TEST ANSWER -->
+                  <p>There are <span id="correct_hosts">{{ answer_of_hosts }}</span> useable hosts and <span  id="correct_subnets">{{ number_of_subnets }}</span> subnets available!</p>
+
+                </div>
+
+                <p class="lead text-center" id="input_instructions">Enter your answers in number format with no symbols. Ex; 32000</p>
+                <label for="user_input_hosts">Useable hosts:</label><br>
+                <input id="user_input_hosts" type="text" placeholder="Example: 16000"><br>
+                <label for="user_input_networks">Subnets:</label><br>
+                <input id="user_input_networks" type="text" placeholder="Example: 256"><br>
+                <button class="btn btn-success margin-top-5px" value="Go!" id="go_button_hosts_and_networks">GO!</button><br>
+                <a href="/labs"><button type="button" class="btn btn-primary margin-top-5px">NEW QUESTION</button></a>
+
+
+
+              </div> <!-- END HOW MANY HOSTS AND NETWORKS TAB -->
 
               <div class="tab-pane fade" id="about-site" role="tabpanel" aria-labelledby="about-site-tab"><!-- START ABOUT THE SITE TAB -->
                 <h1>PacketFlipper is</h1>
