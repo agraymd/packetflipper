@@ -13,65 +13,65 @@ The project evolved from working to learn basic python skills. Using the <ipaddr
 
 This project created a fun set of challenges and the chance to work with many technologies and concepts such as: 
 
-Python
-Git 
-Nginx
-Postgres (SQL Database)
-Django
-Gunicorn
-AWS (EC2, Route53, IAM. . . )
-Linux
-Let’s Encrypt / Certbot (SSL/TLS Certificates) 
-CI / CD (push and pull from dev to prod using Git repos and scripts)
-Information Security (Environment variables, server hardening and best practices, etc).
+Python \
+Git \
+Nginx \
+Postgres (SQL Database) \
+Django \
+Gunicorn \
+AWS (EC2, Route53, IAM. . . ) \
+Linux \
+Let’s Encrypt / Certbot (SSL/TLS Certificates) \
+CI / CD (push and pull from dev to prod using Git repos and scripts) \
+Information Security (Environment variables, server hardening and best practices, etc). \
 
 
 
 
 
 ### **Launch the Project Locally**
-
 #### **Running the project locally requires the following prerequisites to be installed (commands shown using Debain 10 system):** 
 
-<sudo apt install git>
-<sudo apt install python3-pip>
-<sudo apt install virtualenv>
-<sudo apt install postgresql postgresql-contrib>
+`sudo apt install git`   
+`sudo apt install python3-pip`  
+`udo apt install virtualenv`   
+`udo apt install postgresql postgresql-contrib`   
 
 #### **Create a Database for the Project**
-<sudo -u postgres psql>
-<CREATE DATABASE database_name;>
-<CREATE USER db_username WITH PASSWORD 'your_password';>
-<ALTER ROLE myprojectuser SET client_encoding TO 'utf8';>
-<ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';>
-<ALTER ROLE myprojectuser SET timezone TO 'UTC';>
-<GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;>
-<\q>
+`sudo -u postgres psql`  
+`CREATE DATABASE database_name;`  
+`REATE USER db_username WITH PASSWORD 'your_password';`  
+`LTER ROLE myprojectuser SET client_encoding TO 'utf8';`  
+`LTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';`  
+`LTER ROLE myprojectuser SET timezone TO 'UTC';`  
+`GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;`  
+`\q`  
 
 #### **Clone the Repo**
-<sudo git clone https://github.com/agraymd/packetflipper.git>
+`sudo git clone https://github.com/agraymd/packetflipper.git`
 
 #### **Create virtualenv for the Project**
-<sudo virtualenv packetflipper_env>
-<source packetflipper_env/bin/activate>
-Install Requirements
-<pip3 install -r requirements.txt>
+`sudo virtualenv packetflipper_env`  
+`source packetflipper_env/bin/activate`  
+
+#### **Install Requirements**
+`pip3 install -r requirements.txt`  
  
-#### **Create .env File for Sensitive Items**
-<cd /packetflipper/packetflipper/subnet_app/subnet_app/>
-<sudo touch ./.env>
+#### **Create .env File for Sensitive Items**  
+`cd /packetflipper/packetflipper/subnet_app/subnet_app/`  
+`sudo touch ./.env`  
 
-SECRET_KEY=your_secret_key
-DATABASE_NAME=postgresdatabase                             
-DATABASE_USER=alice                                        
-DATABASE_PASS=your_password                      
-ALLOWED_HOSTS=X.X.X.X,
+SECRET_KEY=your_secret_key  
+DATABASE_NAME=postgresdatabase                               
+DATABASE_USER=alice                                          
+DATABASE_PASS=your_password                        
+ALLOWED_HOSTS=X.X.X.X,  
 
-*Note: <python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'> will print the secret key you need for your .env file.*
+*Note: `python -c 'from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())'` will print the secret key you need for your .env file.*
 
 #### **Run Migrations**
-<python3 manage.py makemigrations>
-<python3 manage.py migrate>
+`python3 manage.py makemigrations`
+`python3 manage.py migrate`
 
 This should be all you need to start the development server and work on the project locally. Deploying to production is possible through a variety of avenues after that. 
 
