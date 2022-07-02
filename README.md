@@ -7,7 +7,7 @@ The site gives users three styles of question:
 -What is the longest subnet mask to accommodate an amount of hosts required  
 -How many hosts and subnets are available given an IP address and CIDR Mask  
 
-The project evolved from working to learn basic python skills. Using the <ipaddress> python module, I was able to create an unlimited source of IP subnetting practice questions by coding the logic in python. 
+The project evolved from working to learn basic python skills. Using the ipaddress python module, I was able to create an unlimited source of IP subnetting practice questions by coding the logic in python. 
 
 ## **Technologies**
 
