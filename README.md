@@ -39,10 +39,10 @@ Information Security (Environment variables, server hardening and best practices
 #### **Create a Database for the Project**
 `sudo -u postgres psql`  
 `CREATE DATABASE database_name;`  
-`REATE USER db_username WITH PASSWORD 'your_password';`  
-`LTER ROLE myprojectuser SET client_encoding TO 'utf8';`  
-`LTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';`  
-`LTER ROLE myprojectuser SET timezone TO 'UTC';`  
+`CREATE USER db_username WITH PASSWORD 'your_password';`  
+`ALTER ROLE myprojectuser SET client_encoding TO 'utf8';`  
+`ALTER ROLE myprojectuser SET default_transaction_isolation TO 'read committed';`  
+`ALTER ROLE myprojectuser SET timezone TO 'UTC';`  
 `GRANT ALL PRIVILEGES ON DATABASE myproject TO myprojectuser;`  
 `\q`  
 
