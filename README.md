@@ -22,7 +22,6 @@ Gunicorn \
 AWS (EC2, Route53, IAM. . . ) \
 Linux \
 Let’s Encrypt / Certbot (SSL/TLS Certificates) \
-CI / CD (push and pull from dev to prod using Git repos and scripts) \
 Information Security (Environment variables, server hardening and best practices, etc). \
 
 
