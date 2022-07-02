@@ -33,8 +33,8 @@ Information Security (Environment variables, server hardening and best practices
 
 `sudo apt install git`   
 `sudo apt install python3-pip`  
-`udo apt install virtualenv`   
-`udo apt install postgresql postgresql-contrib`   
+`sudo apt install virtualenv`   
+`sudo apt install postgresql postgresql-contrib`   
 
 #### **Create a Database for the Project**
 `sudo -u postgres psql`  
