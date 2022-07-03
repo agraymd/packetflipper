@@ -97,5 +97,6 @@ This project could benefit from the following:
 -Testing (Learning about code testing is on the agenda, perhaps I will use this project to do so)  
 -Monitoring / Statistics once deployed to a "production" setup  
 -CI/CD when in production  
--Set up to scale  
+-Set up to scale / load balance 
 -Automated launch / easy teardown of production system  
+-Detailed documentation about process of dev to deploy, etc.
