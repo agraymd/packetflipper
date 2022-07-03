@@ -99,4 +99,5 @@ This project could benefit from the following:
 -CI/CD when in production  
 -Set up to scale / load balance 
 -Automated launch / easy teardown of production system  
--Detailed documentation about process of dev to deploy, etc.
+-Detailed documentation about process of dev to deploy, etc.  
+-A users system where users can login and keep score of some type, questions correct total, streak, etc. 
