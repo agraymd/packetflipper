@@ -1,7 +1,6 @@
 # **Packet Flipper - Introduction**
 Packet Flipper is a web application made using Django that presents three common types of IP subnetting questions you would find on a test like the Cisco CCNA. 
 
-## Demo: http://packetflipper.ddns.net
 
 The site gives users three styles of question: 
 
